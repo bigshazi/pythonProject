@@ -50,7 +50,6 @@ def get_product():
             csv_writer = csv.writer(file, delimiter=',')  # 指定分隔符
             csv_writer.writerow([info, price, nums, name])
 
-
 def main():
     # 打开指定页面
     wb.get('https://www.taobao.com/')

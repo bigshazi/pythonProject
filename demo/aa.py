@@ -1,0 +1,3 @@
+USERNAME = '天王至尊1'
+USERPASSWORD = 'Huf@922108'
+
