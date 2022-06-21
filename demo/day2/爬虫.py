@@ -21,6 +21,15 @@ def search_product(key_word):
     time.sleep(2)
     # 点击登录
     wb.find_element(By.XPATH, '//*[@id="login-form"]/div[4]/button').click()
+
+    # 滚动滑条
+    #login = wb.find_element(By.XPATH, '//*[@id="nc_1_n1z"]')
+    #action = ActionChains(wb)
+    #action.click_and_hold(on_element=login)
+    #action.move_by_offset(xoffset=258, yoffset=0)滑动距离
+    #action.pause(0.5).release().perform()  # perform()执行动作链
+    #wb.find_element(By.XPATH, '//*[@id="login-form"]/div[4]/button').click()
+
     #登录等待时间
     time.sleep(2)
     # 发送关键字
