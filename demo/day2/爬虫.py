@@ -7,6 +7,8 @@ import csv
 
 # 搜索商品
 def search_product(key_word):
+    # 发送关键字
+    wb.find_element(By.ID, 'q').send_keys(key_word)
     # 设定随机等待时间
     time.sleep(random.randint(1,3))
     # 最大化浏览器
@@ -32,8 +34,6 @@ def search_product(key_word):
 
     #登录等待时间
     time.sleep(2)
-    # 发送关键字
-    wb.find_element(By.ID,'q').send_keys(key_word)
     # class前要加点,点击搜索按钮
     wb.find_element(By.XPATH,'//*[@id="J_TSearchForm"]/div[1]/button').click()
 
@@ -85,7 +85,7 @@ def query(sql):
     cursor.close()#关闭游标
     db.close()#关闭连接
     return data
-
+#内置类名
 if __name__ == '__main__':
     key_word =input("清输入你想爬取的关键字：")
     # 指定浏览器
