@@ -1,12 +1,18 @@
 
 def get_input():
     input_string = input('请输入由逗号隔开的数字：')
-    a_string,b_string = input_string.split(',')
-    return a_string,b_string
+    a,b = input_string.split(',')
+    try:
+        float(a)
+        float(b)
+        return int(a),int(b)
+    except ValueError :
+        pass
+    print(b,type(b))
+
 def num(a,b):
     try:
         num3 = a / b
-        return num3
     except ZeroDivisionError :
         print("除数不可以为 0 ")
     except TypeError :
@@ -17,4 +23,5 @@ def num(a,b):
 def run():
     a,b = get_input()
     num(a,b)
-run()
+if __name__ == '__main__'  :
+    run()
