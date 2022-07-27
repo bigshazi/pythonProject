@@ -65,7 +65,7 @@ def main():
     page = search_product(key_word)
     page_nums=1
     #爬取页数
-    while page!= page_nums:
+    while  page_nums < 3:
         print('*'*100)
         print("正在爬取{}页的信息".format(page_nums))
         wb.get('https://s.taobao.com/search?q={}&s={}'.format(key_word,page_nums))
